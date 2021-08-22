@@ -19,7 +19,6 @@
 ?>
    <form action="shorten.php" method="post">
     <input type="text" name="url" placeholder="Введите URL" autocomplete="off">
-    <input type="url" name="url" placeholder="Введите URL" autocomplete="off">
     <input type="submit" value="Сократить">
    </form>
   </div>
