@@ -1,4 +1,5 @@
 <?php
+//Этот файл не нужен, я его оставил как драфт
 
 $servername = 'localhost';
 $username = 'root';

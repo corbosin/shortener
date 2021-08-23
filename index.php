@@ -1,4 +1,5 @@
 <?php
+//Этот файл отражает страницу, её элементы и запускает файл shorten.php
   session_start();
 ?>
 <!DOCTYPE html>
