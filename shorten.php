@@ -5,6 +5,7 @@
   session_start();
   require_once "shortener.php";
 
+
   $s = new Shortener();
 
   if(isset($_POST['url'])) {

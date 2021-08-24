@@ -46,8 +46,7 @@ class Shortener {
     $code = $this->db->query("SELECT long_url FROM url_short WHERE short_url = '$code'");
 
     if($code->num_rows) {
-     return $code->fetch_object()->short_url;
-     return $code->fetch_object()->url;
+     return $code->fetch_object()->long_url;
     }
 
     return '';
