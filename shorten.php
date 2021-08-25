@@ -15,7 +15,7 @@
     $_SESSION['feedback'] = "Готово! Вот ваша ссылка: <a href='http://localhost:3333/?code=$code'>http://localhost:3333/?code=$code</a>";
     
    } else {
-    $_SESSION['feedback'] = "Ошибка! Возможно, некорректный URL?";
+    $_SESSION['feedback'] = "Ваша ссылка уже есть! Возможно, <a href='http://localhost:3333/?code=$code'>http://localhost:3333/?code=$code</a>";
     if(!$_SESSION) {
       die('error what');
     }

@@ -29,7 +29,7 @@ class Shortener {
     $exsists = $this->db->query("SELECT short_url FROM url_short WHERE long_url = '{$url}'");
 
     if($exsists->num_rows) {
-     return $exsists->fetch_object()->code;
+     return $exsists->fetch_object()->short_url;
     } else {
      $this->db->query("INSERT INTO url_short(long_url) VALUE('{$url}')");
 
