@@ -14,9 +14,9 @@
 class Shortener {
    protected $db;
 
-   public function _connect() {
-	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-    $this->db = new Mysqli('d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud', 'root', '' , 'shortener');
+   public function __construct() {
+
+    $this->db = new Mysqli('d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud', 'yelo', '31G10a93r' , 'shortener');
    }
 
    public function generateCode($num) {

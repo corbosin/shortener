@@ -1,7 +1,4 @@
 <?php
-//Здесь проходит продолжение индекс.пхп, а именно вызывается функция, которая генерирует ссылку и записывает её в субд. В данный момент не работает
-//и не выдает ссылку из субд если такая уже там ест, а выдает ошибку, при этом переход по сссылке ведет на индекс.пхп (судя по всему это должно быть
-//прописано в хедере внизу страницы, но как нужную ссылку сопоставить с субд я хз)
   session_start();
   require_once "shortener.php";
 
@@ -12,10 +9,10 @@
    $url = $_POST['url'];
 
    if($code = $s->makeCode($url)) {
-    $_SESSION['feedback'] = "Готово! Вот ваша ссылка: <a href='http://localhost:3333/?code=$code'>http://localhost:3333/?code=$code</a>";
-    
+    $_SESSION['feedback'] = "Готово! Вот ваша ссылка: <a href='http://d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud/?code=$code'>http://d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud/?code=$code</a>";
+
    } else {
-    $_SESSION['feedback'] = "Ваша ссылка уже есть! Возможно, <a href='http://localhost:3333/?code=$code'>http://localhost:3333/?code=$code</a>";
+    $_SESSION['feedback'] = "Ваша ссылка уже есть! Возможно, <a href='http://d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud/?code=$code'>http://d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud/?code=$code";
     if(!$_SESSION) {
       die('error what');
     }
