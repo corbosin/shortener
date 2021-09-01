@@ -14,7 +14,7 @@
 class Shortener {
    protected $db;
 
-   public function _connect() {
+   public function mysqli_connect() {
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $this->db = new Mysqli('d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud', 'root', '' , 'shortener');
    }
