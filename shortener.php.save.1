@@ -14,16 +14,14 @@
 class Shortener {
    protected $db;
 
-   public function __construct() {
-	
-    $this->db = new Mysqli('localhost', 'ela', 'elaPass123', 'shortener');
+   public function mysqli_connect()
+    $this->db = new Mysqli('d4a3fd95-7741-4559-b326-095c66e1b985.pub.instances.scw.cloud', 'root', '' , 'shortener');
 if (mysqli_connect_errno())
 {echo "failed connection:".mysqli_connect_error();
-}
    }
 
 
-  public function generateCode($num) {
+   public function generateCode($num) {
     return base_convert($num, 10, 36);
    }
 
