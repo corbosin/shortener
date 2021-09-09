@@ -5,7 +5,7 @@
 class Shortener {
    protected $db;
 
-   function __construct() {
+  public function __construct() {
 
     $this->db = new Mysqli('localhost', 'ela', 'elaPass123', 'shortener');
 if (mysqli_connect_errno())

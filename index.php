@@ -1,7 +1,7 @@
 <?php
 //Этот файл отражает страницу, её элементы и запускает файл shorten.php
   session_start();
-  if(isset($_GET['code'])) {
+  if(htmlspecialchars(isset($_GET['code']))) {
     require_once "redirect.php";
   }
 ?>
