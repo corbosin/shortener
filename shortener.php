@@ -1,24 +1,18 @@
 <?php
-//здесь записаны все функции внутри класса Shortener
-//  0) Заочно скажу, что я допустил ошибку в именовании, поэтому неудобно их смотреть, но в целом таблица называется url_short, а графа с коротким url 
-//     называется short_url
-//  1) функция констракт открывает нужную таблицу
-//  2) функция generateCode создает случайнй код размером от 10 до 36  символов и ставит его в переменную num
-//  3) функция makeCode выполняет много задач
-//      3.1) $url - создается переменная, в которой всё экранируется, то есть чтобы спецсимволы не мешали
-//      3.2) $exists - достает короткую версию $url из таблицы из той графы, где длинная ссылка равна той, что ввел пользователь (т.е. эта часть должна избавлять от повторов)
-//      3.3) num_rows не могу понять что делает, в такой форме его вообще не записывают в мануалах, но видимо определяет сколько рядов я смотрю, но
-//           мне это это не говорит нормально ни о чем и как он находит нужную строку
-//      3.4) $getUrl - фунция, которая должна перенаправлять
-
+//deploy check
 class Shortener {
    protected $db;
 
-   public function __construct() {
-    $this->db = new Mysqli('localhost', 'yellow', '31101993', 'shortener');
+  public function __construct() {
+
+    $this->db = new Mysqli('localhost', 'ela', 'elaPass123', 'shortener');
+if (mysqli_connect_errno())
+{echo "failed connection:".mysqli_connect_error();
+}
    }
 
-   public function generateCode($num) {
+
+  public function generateCode($num) {
     return base_convert($num, 10, 36);
    }
 
