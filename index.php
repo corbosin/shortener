@@ -23,7 +23,7 @@
 ?>
    <form action="shorten.php" method="post">
     <input type="text" name="url" placeholder="Введите URL" autocomplete="off">
-    <input type="submit" value="Сократить">
+    <input type="submit" value="NAKHUI RABOTAET">
    </form>
   </div>
 </body>
